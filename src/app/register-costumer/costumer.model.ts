@@ -5,4 +5,5 @@ export interface Costumer {
     email:string;
     direccion:string;
     telefono:string;
+    contrasenha:string;
 }
