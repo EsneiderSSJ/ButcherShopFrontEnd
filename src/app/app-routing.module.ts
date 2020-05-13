@@ -5,6 +5,10 @@ import { RegisterCostumerModule } from './register-costumer/register-costumer.mo
 
 
 const routes: Routes = [ 
+  {
+    path: 'clientes',
+    component: ListaClienteComponent
+  },
 {
   path: '**',
   component: RegisterCostumerComponent,
