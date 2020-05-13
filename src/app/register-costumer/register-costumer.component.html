@@ -1,9 +1,11 @@
-<div class="columns  is-vcentered">
-    <div class="column is-four-fifths">
+<div class="columns  is-centered">
+    <div class="column is-two-fifths">
         <br>
         <div [formGroup]='formCliente' class="box">
+            <div class="columns  is-centered">
             <div class="title is-centered">
                 <h1>Registro de cliente</h1>
+            </div>
             </div>
     
             <div class="field">
@@ -36,9 +38,11 @@
                     <input class="input" type="email" placeholder="Telefono" formControlName="telefono">
                 </div>
             </div>
-
+            <br>
+            <div class="columns  is-centered">
             <div class="form-control">
                 <button class="button is-primary" (click)="save()">Guardar</button>
+            </div>
             </div>
 
         </div>
