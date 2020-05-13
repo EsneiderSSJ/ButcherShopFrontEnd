@@ -1,0 +1,56 @@
+<div class="columns  is-centered">
+    <div class="column is-two-fifths">
+        <br>
+        <div [formGroup]='formCliente' class="box">
+            <div class="columns  is-centered">
+            <div class="title is-centered">
+                <h1>Registro de cliente</h1>
+            </div>
+            </div>
+    
+            <div class="field">
+                <label class="label"></label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Nombre" formControlName="nombre">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label"></label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Apellido" formControlName="apellido">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label"></label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Email" formControlName="email">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label"></label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Direccion" formControlName="direccion">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label"></label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Telefono" formControlName="telefono">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label"></label>
+                <div class="control">
+                    <input class="input" type="password" placeholder="Contraseña" formControlName="contrasenha">
+                </div>
+            </div>
+            <br>
+            <div class="columns  is-centered">
+            <div class="form-control">
+                <button class="button is-primary" (click)="save()">Guardar</button>
+            </div>
+            </div>
+
+        </div>
+    </div>
+</div>
