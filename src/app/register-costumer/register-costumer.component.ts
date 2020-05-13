@@ -22,7 +22,8 @@ export class RegisterCostumerComponent implements OnInit {
       apellido: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
       direccion: new FormControl('', Validators.required),
-      telefono: new FormControl('', Validators.required)
+      telefono: new FormControl('', Validators.required),
+      contrasenha: new FormControl('', Validators.required)
     });
   }
 
