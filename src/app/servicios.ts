@@ -5,6 +5,6 @@ export const GLOBAL = {
 
   export const Constantes = {
   services: {
-      cliente: GLOBAL.contextPath + 'rest/cliente/',
+      cliente: GLOBAL.contextPath + '/v1/costumers/',
   }  
 }

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ListCustomerService } from './list-customer.service';
 import { Costumer } from '../register-costumer/costumer.model';
 import { RegisterCostumerComponent } from '../register-costumer/register-costumer.component';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-list-customers',
@@ -26,7 +28,7 @@ export class ListCustomersComponent implements OnInit {
   }
   verCliente(id: number) {
     console.log(id)
-    var cliente: Cliente = null;
+    var cliente: Costumer = null;
     this.listCustomers.obtenerClientePorId(id).subscribe(
       response => {
         console.log(response);
