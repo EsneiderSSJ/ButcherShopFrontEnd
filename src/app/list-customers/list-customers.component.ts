@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListCustomerService } from './list-customer.service';
-import { Costumer } from '../register-costumer/costumer.model';
-import { RegisterCostumerComponent } from '../register-costumer/register-costumer.component';
+import { Customer } from '../register-customer/customer.model';
+import { RegisterCustomerComponent } from '../register-customer/register-customer.component';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -11,8 +11,8 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./list-customers.component.scss']
 })
 export class ListCustomersComponent implements OnInit {
-  public customers: Costumer[];
-  public dataSource = new MatTableDataSource<Costumer>(this.customers);
+  public customers: Customer[];
+  public dataSource = new MatTableDataSource<Customer>(this.customers);
   public displayedColumns: string[] = ['id', 'nombre', 'apellido', 'email'
     , 'direccion', 'telefono', 'Acciones'];
   constructor(private listCustomers:ListCustomerService, public dialog: MatDialog) { }
@@ -28,12 +28,12 @@ export class ListCustomersComponent implements OnInit {
   }
   verCliente(id: number) {
     console.log(id)
-    var cliente: Costumer = null;
+    var cliente: Customer = null;
     this.listCustomers.obtenerClientePorId(id).subscribe(
       response => {
         console.log(response);
         console.log('abrio el dialog');
-        const dialogRef = this.dialog.open(RegisterCostumerComponent, {
+        const dialogRef = this.dialog.open(RegisterCustomerComponent, {
           width: '60%',
           height: '420px',
           data: response
