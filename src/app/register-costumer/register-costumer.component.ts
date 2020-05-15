@@ -18,18 +18,18 @@ export class RegisterCostumerComponent implements OnInit {
 
   ngOnInit(): void {
     this.formCliente =  this.formBuilder.group({
-      nombre: new  FormControl('',Validators.required),
-      apellido: new FormControl('', Validators.required),
+      name: new  FormControl('',Validators.required),
+      lastname: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
-      direccion: new FormControl('', Validators.required),
-      telefono: new FormControl('', Validators.required),
-      contrasenha: new FormControl('', Validators.required)
+      address: new FormControl('', Validators.required),
+      telephone: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required)
     });
   }
 
   public save(){
     this.cliente = this.formCliente.value;
-   this.clienteService.save(this.cliente).subscribe(response =>{
+    this.clienteService.save(this.cliente).subscribe(response =>{
       console.log(response)
     });
   }
