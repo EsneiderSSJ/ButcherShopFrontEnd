@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Form, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Builder } from 'protractor';
-import { Costumer } from './costumer.model';
-import { RegisterCostumerService } from './register-costumer.service';
+import { Customer } from './customer.model';
+import { RegisterCustomerService } from './register-customer.service';
 
 @Component({
   selector: 'app-register-costumer',
-  templateUrl: './register-costumer.component.html',
-  styleUrls: ['./register-costumer.component.scss']
+  templateUrl: './register-customer.component.html',
+  styleUrls: ['./register-customer.component.scss']
 })
-export class RegisterCostumerComponent implements OnInit {
+export class RegisterCustomerComponent implements OnInit {
 
   formCliente: FormGroup;
-  cliente:Costumer;
+  cliente:Customer;
   constructor(private formBuilder: FormBuilder, 
-              private clienteService:RegisterCostumerService) { }
+              private clienteService:RegisterCustomerService) { }
 
   ngOnInit(): void {
     this.formCliente =  this.formBuilder.group({

@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RegisterCostumerComponent } from './register-costumer.component';
+import { RegisterCustomerComponent } from './register-customer.component';
 import { MaterialModule } from '../material.modules';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [RegisterCostumerComponent],
+  declarations: [RegisterCustomerComponent],
   imports: [
     CommonModule,MaterialModule,HttpClientModule
   ],
   exports: [
-   RegisterCostumerComponent
+    RegisterCustomerComponent
    
   ]
 })

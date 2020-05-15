@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { RegisterCostumerComponent } from './register-costumer/register-costumer.component';
-import { RegisterCostumerModule } from './register-costumer/register-costumer.module';
+import { RegisterCustomerComponent } from './register-customer/register-customer.component';
+import { RegisterCostumerModule } from './register-customer/register-customer.module';
 import { ListCustomersComponent } from './list-customers/list-customers.component';
 import { ListCustomersModule } from './list-customers/list-customers.module';
 
@@ -13,7 +13,7 @@ const routes: Routes = [
   },
 {
   path: '**',
-  component: RegisterCostumerComponent,
+  component: RegisterCustomerComponent,
 }];
 
 @NgModule({
