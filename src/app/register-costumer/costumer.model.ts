@@ -1,9 +1,9 @@
 export interface Costumer {
     id: number;
-    nombre:string;
-    apellido:string;
+    name:string;
+    lastname:string;
     email:string;
-    direccion:string;
-    telefono:string;
-    contrasenha:string;
+    address:string;
+    telephone:string;
+    password:string;
 }

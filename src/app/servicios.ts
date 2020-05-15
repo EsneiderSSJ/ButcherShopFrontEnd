@@ -5,6 +5,6 @@ export const GLOBAL = {
 
   export const Constantes = {
   services: {
-      cliente: GLOBAL.contextPath + '/v1/costumers/',
+      cliente: "http://localhost:8080/v1/customers"  
   }  
 }
