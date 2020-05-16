@@ -11,10 +11,10 @@ export class RegisterCustomerService {
   constructor(private http: HttpClient) { }
 
   public obtenerTodoLosClientes(): Observable <any>{
-    return this.http.get(Constantes.services.cliente);
+    return this.http.get(Constantes.services.customer);
   }
 
-  public save(cliente: Customer): Observable<any>{
-   return this.http.post(Constantes.services.cliente,cliente);
+  public save(customer: Customer): Observable<any>{
+   return this.http.post(Constantes.services.customer,customer);
   }
 }

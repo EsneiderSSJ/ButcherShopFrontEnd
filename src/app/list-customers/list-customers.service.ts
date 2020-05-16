@@ -10,16 +10,17 @@ import { HttpClient } from '@angular/common/http';
 export class ListCustomerService {
 
   constructor(private http: HttpClient) { }
-  public obtenerClientes(): Observable<Customer[]>{
-    return this.http.get<Customer[]>(Constantes.services.cliente);
+  public obtenerCustomers(): Observable<Customer[]>{
+    return this.http.get<Customer[]>(Constantes.services.customer);
   }
-  public obtenerClientePorId(id:number): Observable<Customer>{
-    return this.http.get<Customer>(Constantes.services.cliente);
+  
+  public obtenerCustomerPorId(id:number): Observable<Customer>{
+    return this.http.get<Customer>(Constantes.services.customer);
   }
 
   public delete(id:number){
-    console.log(`${Constantes.services.cliente}/${id}`)
-    return this.http.delete(`${Constantes.services.cliente}/${id}`);
+    console.log(`${Constantes.services.customer}/${id}`)
+    return this.http.delete(`${Constantes.services.customer}/${id}`);
   }
 }
 
