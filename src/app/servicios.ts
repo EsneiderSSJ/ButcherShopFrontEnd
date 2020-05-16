@@ -5,6 +5,6 @@ export const GLOBAL = {
 
   export const Constantes = {
   services: {
-      cliente: "http://localhost:8080/v1/customers"  
+      customer: "http://localhost:8080/v1/customers"  
   }  
 }

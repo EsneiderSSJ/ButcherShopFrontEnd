@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ListCustomerService } from './list-customer.service';
+import { ListCustomerService } from './list-customers.service';
 import { Customer } from '../register-customer/customer.model';
 import { RegisterCustomerComponent } from '../register-customer/register-customer.component';
 import { MatTableDataSource } from '@angular/material/table';
@@ -21,15 +21,15 @@ export class ListCustomersComponent implements OnInit {
     this.cargarDatos();
   }
   public cargarDatos() {
-    this.listCustomers.obtenerClientes().subscribe(response => {
+    this.listCustomers.obtenerCustomers().subscribe(response => {
       this.customers = response;
       this.dataSource.data = this.customers;
     })
   }
-  verCliente(id: number) {
+  verCustomer(id: number) {
     console.log(id)
-    var cliente: Customer = null;
-    this.listCustomers.obtenerClientePorId(id).subscribe(
+    var customers: Customer = null;
+    this.listCustomers.obtenerCustomerPorId(id).subscribe(
       response => {
         console.log(response);
         console.log('abrio el dialog');
@@ -39,7 +39,7 @@ export class ListCustomersComponent implements OnInit {
           data: response
         });
         console.log(id);
-        cliente = response;
+        customers = response;
       })
   }
   public delete(id: number) {
