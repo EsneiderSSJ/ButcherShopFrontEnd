@@ -17,6 +17,12 @@ export class RegisterCustomerComponent implements OnInit {
               private clienteService:RegisterCustomerService) { }
 
   ngOnInit(): void {
+    
+
+    this.createdata();
+
+  }
+  public createdata (){
     this.formCliente =  this.formBuilder.group({
       name: new  FormControl('',Validators.required),
       lastname: new FormControl('', Validators.required),
@@ -24,13 +30,19 @@ export class RegisterCustomerComponent implements OnInit {
       address: new FormControl('', Validators.required),
       telephone: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required)
+
     });
+
   }
 
   public save(){
     this.cliente = this.formCliente.value;
     this.clienteService.save(this.cliente).subscribe(response =>{
       console.log(response)
+      if(response!=null){
+        alert('Cliente guardado exitosamente');
+        this.createdata();
+      }
     });
   }
 

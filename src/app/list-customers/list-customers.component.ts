@@ -43,8 +43,11 @@ export class ListCustomersComponent implements OnInit {
       })
   }
   public delete(id: number) {
-    this.listCustomers.delete(id);
-    console.log('elimino')
+    this.listCustomers.delete(id).subscribe(response=>{
+      console.log(response);
+      console.log('elimino')
     this.cargarDatos();
+    });
+    
   }
 }

@@ -18,9 +18,9 @@ export class ListCustomerService {
     return this.http.get<Customer>(Constantes.services.customer);
   }
 
-  public delete(id:number){
+  public delete(id:number): Observable<any>{
     console.log(`${Constantes.services.customer}/${id}`)
-    return this.http.delete(`${Constantes.services.customer}/${id}`);
+    return this.http.delete(`${Constantes.services.customer}/${id}`,{ responseType: 'text' });
   }
 }
 
